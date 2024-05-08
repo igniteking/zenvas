@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Room from "./Room";
 
 export const metadata = {
-  title: "Zenvas",
+  title: "Zenvas by Zaidan Khan",
   description:
     "Elevate design collaboration with Zenvas: a Next.js app inspired by Figma. Streamline workflows, boost creativity.",
 };
