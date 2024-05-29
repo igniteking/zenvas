@@ -10,6 +10,7 @@ import { Button } from "./ui/button";
 import ShapesMenu from "./ShapesMenu";
 import ActiveUsers from "./users/ActiveUsers";
 import { NewThread } from "./comments/NewThread";
+import { Status } from "./status/Status";
 
 const Navbar = ({
   activeElement,
@@ -23,10 +24,10 @@ const Navbar = ({
       value.some((val) => val?.value === activeElement?.value));
 
   return (
-    <nav className='flex select-none items-center justify-between gap-4 bg-primary-black px-5 text-white'>
+    <nav className='flex select-none items-center justify-between bg-primary-black px-5 text-white'>
       <Image src='/logo.png' alt='Zenvas Logo' width={50} height={50} />
 
-      <ul className='flex flex-row'>
+      <ul className='ml-28 flex flex-row'>
         {navElements.map((item: ActiveElement | any) => (
           <li
             key={item.name}
@@ -72,8 +73,10 @@ const Navbar = ({
           </li>
         ))}
       </ul>
-
-      <ActiveUsers />
+      <div className='flex items-center justify-between gap-8'>
+        <ActiveUsers />
+        <Status />
+      </div>
     </nav>
   );
 };
